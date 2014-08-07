@@ -15,7 +15,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */ -->
-  <ModulePrefs title="Starter App">
+  <ModulePrefs title="Koding Teamwork">
     <Require feature="rpc"/>
     <Require feature="views"/>
   </ModulePrefs>
@@ -44,7 +44,7 @@
               console.log("Encode");
             }
             console.log("TSet asdfsavalusadfsde pre");
-            if (teamworkUrl !== null) {
+            if (teamworkUrl !== undefined) {
               console.log("TSet value pre");
               gapi.hangout.data.setValue('teamworkUrl', teamworkUrl);
               console.log("TSet value");
