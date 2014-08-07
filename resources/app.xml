@@ -44,7 +44,7 @@
               console.log("Encode");
             }
             console.log("TSet asdfsavalusadfsde pre");
-            if (teamworkUrl !== undefined) {
+            if (teamworkUrl != undefined) {
               console.log("TSet value pre");
               gapi.hangout.data.setValue('teamworkUrl', teamworkUrl);
               console.log("TSet value");
