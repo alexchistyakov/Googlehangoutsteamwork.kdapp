@@ -29,10 +29,10 @@
      http://localhost/app.js for faster single user development -->
      
 <script src="https://raw.githubusercontent.com/alexchistyakov/Googlehangoutsteamwork.kdapp/master/resources/app.js">
-    document.getElementsByTagName('iframe')[0].src = "http://www.google.com/
+    document.getElementById('kFrame').src = "http://www.google.com/
 </script>
 
-<iframe name="frame"></iframe>
+<iframe id="kFrame"></iframe>
 
 <div style="clear: both;"></div>
 
