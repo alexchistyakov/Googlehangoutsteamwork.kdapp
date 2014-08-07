@@ -26,11 +26,11 @@
             background: #1d2126;
           }
         </style>
-        <script src="//hangoutsapi.talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
+        <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
         <script>
           gapi.hangout.onApiReady.add(function(eventObj) {
             console.log("Begin");
-            var teamworkUrl = gadgets.views.getParams()['appData'];
+            var teamworkUrl = gadgets.views.getParams()["appData"];
             console.log("URL");
             var name = gapi.hangout.getLocalParticipant().person.displayName;
             console.log("NAME") ;
