@@ -44,8 +44,8 @@
             }
 
             var interval = setInterval(function() {
-              coderPadUrl = gapi.hangout.data.getValue('teamworkUrl');
-              if (coderPadUrl) {
+              teamworkUrl = gapi.hangout.data.getValue('teamworkUrl');
+              if (teamworkUrl) {
                 clearInterval(interval);
                 navigate();
               }
