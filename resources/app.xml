@@ -32,6 +32,7 @@
             var teamworkUrl = gadgets.views.getParams()['appData'];
             var name = gapi.hangout.getLocalParticipant().person.displayName;
             var hangoutUrl = gapi.hangout.getHangoutUrl();
+            console.log("Teamwork URL: ")
             console.log(teamworkUrl);
             function navigate() {
               var src = teamworkUrl;
