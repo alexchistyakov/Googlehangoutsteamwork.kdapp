@@ -20,18 +20,42 @@
   </ModulePrefs>
   <Content type="html"><![CDATA[
 <!DOCTYPE html>
-<!-- The hangout API JavaScript. Always include this first -->
-<script src="//hangoutsapi.talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
+      <head>
+        <style>
+          html, body {
+            background: #1d2126;
+          }
+        </style>
+        <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
+        <script>
+          gapi.hangout.onApiReady.add(function(eventObj) {
+            var teamworkUrl = gadgets.views.getParams()['appData'];
+            var name = gapi.hangout.getLocalParticipant().person.displayName;
+            var hangoutUrl = gapi.hangout.getHangoutUrl();
 
-<!-- The JavaScript for this app. This must always be a full URL not a
-     relative path.
-     Tip: You can load it from a local web server such as
-     http://localhost/app.js for faster single user development -->
+            function navigate() {
+              var src = teamworkUrl;
+              window.location = encodeURI(src);
+            }
 
-<iframe id="kFrame"></iframe>
-<script src="https://raw.githubusercontent.com/alexchistyakov/Googlehangoutsteamwork.kdapp/master/resources/app.js"></script>
+            if (coderPadUrl) {
+              gapi.hangout.data.setValue('teamworkUrl', teamworkUrl);
+            }
 
-<div style="clear: both;"></div>
+            var interval = setInterval(function() {
+              coderPadUrl = gapi.hangout.data.getValue('teamworkUrl');
+              if (coderPadUrl) {
+                clearInterval(interval);
+                navigate();
+              }
+            }, 50);
 
+          });
+        </script>
+      </head>
+
+      <body></body>
+    </html>
+    
 ]]></Content>
 </Module>
