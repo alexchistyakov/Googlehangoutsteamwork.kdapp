@@ -27,8 +27,9 @@
      relative path.
      Tip: You can load it from a local web server such as
      http://localhost/app.js for faster single user development -->
+     
 <script src="https://raw.githubusercontent.com/alexchistyakov/Googlehangoutsteamwork.kdapp/master/resources/app.js">
-    documents.frame.src = getParameter("gd");
+    document.getElementsByTagName('iframe')[0].src = "http://www.google.com/
 </script>
 
 <iframe name="frame"></iframe>
