@@ -49,7 +49,7 @@
               gapi.hangout.data.setValue('teamworkUrl', teamworkUrl);
               console.log("TSet value");
             }
-
+            console.log("TSeDICk");
             var interval = setInterval(function() {
               console.log("GET PRE");
               teamworkUrl = gapi.hangout.data.getValue('teamworkUrl');
