@@ -19,11 +19,11 @@ class GoogleHangoutsTeamworkMainView extends KDView
       cssClass: "button"
       callback: =>
         inputText = @input.getValue()
-        inputText = inputText.replace /:/,"%3A"
-        inputText = inputText.replace /\//,"%2F"
-        inputText = inputText.replace /\?/,"%3F"
-        inputText = inputText.replace /\=/,"%3D"
-        link = "https://plus.google.com/hangouts/_?gid=318240128533&gd=#{inputText}"
+        inputText = inputText.replace /:/g,"%3A"
+        inputText = inputText.replace /\//g,"%2F"
+        inputText = inputText.replace /\?/g,"%3F"
+        inputText = inputText.replace /\=/g,"%3D"
+        link = "https://plus.google.com/hangouts/_?gid=318240128533&gd=#{inputText}%2F"
         window.open link, "_blank"
       
 
