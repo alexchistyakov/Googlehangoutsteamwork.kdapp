@@ -27,12 +27,11 @@
      relative path.
      Tip: You can load it from a local web server such as
      http://localhost/app.js for faster single user development -->
-     
-<script src="https://raw.githubusercontent.com/alexchistyakov/Googlehangoutsteamwork.kdapp/master/resources/app.js">
-    document.getElementById('kFrame').src = "http://www.google.com/
-</script>
 
 <iframe id="kFrame"></iframe>
+<script src="https://raw.githubusercontent.com/alexchistyakov/Googlehangoutsteamwork.kdapp/master/resources/app.js">
+    document.getElementById('kFrame').src = "//www.google.com/"
+</script>
 
 <div style="clear: both;"></div>
 
