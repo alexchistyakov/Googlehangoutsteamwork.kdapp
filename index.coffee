@@ -5,9 +5,27 @@ class GoogleHangoutsTeamworkMainView extends KDView
     super options, data
 
   viewAppended:->
-    @addSubView new KDView
-      partial  : "Welcome to Google Hangouts Teamwork app!"
-      cssClass : "welcome-view"
+    @addSubView new KDHeaderView
+      title: "Google Hangouts Teamwork"
+      type: "big"
+    @addSubView @input = new KDInputView
+      placeholder: "Teamwork session link"
+      cssClass: "input"
+    @addSubView @container = new KDCustomHTMLView
+      cssClass: "container"
+      tagName: "div"
+    @container.addSubView new KDButtonView
+      title: "Submit"
+      cssClass: "button"
+      callback: =>
+        inputText = @input.getValue()
+        inputText = inputText.replace /:/,"%3A"
+        inputText = inputText.replace /\//,"%2F"
+        inputText = inputText.replace /\?/,"%3F"
+        inputText = inputText.replace /\=/,"%3D"
+        link = "https://plus.google.com/hangouts/_?gid=318240128533&gd=#{inputText}"
+        window.open link, "_blank"
+      
 
 class GoogleHangoutsTeamworkController extends AppController
 
