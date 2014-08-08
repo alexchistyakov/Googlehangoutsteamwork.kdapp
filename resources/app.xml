@@ -41,11 +41,11 @@
               gapi.hangout.data.setValue('teamworkUrl', teamworkUrl);
             }
 
-            intervalFn = setTimeout(function() {
+            intervalId = setTimeout(function() {
               var teamworkUrl = gapi.hangout.data.getValue('teamworkUrl');
-              
+
               if (typeof teamworkUrl !== "undefined") {
-                clearInterval(intervalFn);
+                clearInterval(intervalId);
 
                 navigate(teamworkUrl);
               }
