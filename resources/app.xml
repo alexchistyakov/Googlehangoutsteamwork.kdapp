@@ -42,6 +42,7 @@
             }
             var interval = setInterval(function() {
               teamworkUrl = gapi.hangout.data.getValue('teamworkUrl');
+              console.log(">>>>>>>>>>",teamworkUrl);
               if (teamworkUrl != undefined) {
                 clearInterval(interval);
                 navigate();
