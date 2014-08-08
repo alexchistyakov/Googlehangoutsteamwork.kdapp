@@ -30,35 +30,21 @@
         <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
         <script>
           gapi.hangout.onApiReady.add(function(eventObj) {
-            console.log("Begin");
             var teamworkUrl = gadgets.views.getParams()["appData"];
-            console.log("URL");
             var name = gapi.hangout.getLocalParticipant().person.displayName;
-            console.log("NAME") ;
             var hangoutUrl = gapi.hangout.getHangoutUrl();
-            console.log("Teamwork URL: ");
-            console.log(teamworkUrl);
             function navigate() {
               var src = teamworkUrl;
               window.location = encodeURI(src);
-              console.log("Encode");
             }
-            console.log("TSet asdfsavalusadfsde pre");
             if (teamworkUrl != undefined) {
-              console.log("TSet value pre");
               gapi.hangout.data.setValue('teamworkUrl', teamworkUrl);
-              console.log("TSet value");
             }
-            console.log("TSeDICk");
             var interval = setInterval(function() {
-              console.log("GET PRE");
               teamworkUrl = gapi.hangout.data.getValue('teamworkUrl');
-              console.log("GET");
               if (teamworkUrl != undefined) {
                 clearInterval(interval);
-                console.log("Clear");
                 navigate();
-                console.log("PN");
               }
             }, 50);
 

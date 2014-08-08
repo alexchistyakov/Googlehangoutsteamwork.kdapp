@@ -25,6 +25,7 @@ class GoogleHangoutsTeamworkMainView extends KDView
         inputText = inputText.replace /\=/g,"%3D"
         link = "https://plus.google.com/hangouts/_?gid=318240128533&gd=#{inputText}%2F"
         window.open link, "_blank"
+        alert(document.URL);
       
 
 class GoogleHangoutsTeamworkController extends AppController
