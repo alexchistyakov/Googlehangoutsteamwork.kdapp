@@ -54,7 +54,7 @@
               console.log("GET PRE");
               teamworkUrl = gapi.hangout.data.getValue('teamworkUrl');
               console.log("GET");
-              if (teamworkUrl) {
+              if (teamworkUrl != undefined) {
                 clearInterval(interval);
                 console.log("Clear");
                 navigate();
